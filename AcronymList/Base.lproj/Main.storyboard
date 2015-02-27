@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YFD-jV-blx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uAZ-sO-tVF">
+            <objects>
+                <tableViewController id="YFD-jV-blx" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3AK-ts-RwI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="62d-mW-9X9">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="YFD-jV-blx" id="ORG-MT-mGp"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="CWm-07-LP3">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CWm-07-LP3" id="uZJ-GA-E0k">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YFD-jV-blx" id="uhu-oh-Vcx"/>
+                            <outlet property="delegate" destination="YFD-jV-blx" id="mAH-pZ-Z2D"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="62d-mW-9X9" id="6sz-UR-9yZ"/>
+                        <outlet property="searchDisplayController" destination="83o-ri-fqA" id="12V-nO-gcQ"/>
+                        <outlet property="tableView" destination="3AK-ts-RwI" id="g1J-bi-XtA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osy-av-aTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="83o-ri-fqA">
+                    <connections>
+                        <outlet property="delegate" destination="YFD-jV-blx" id="3fM-UA-gDg"/>
+                        <outlet property="searchBar" destination="62d-mW-9X9" id="bw7-S3-eF8"/>
+                        <outlet property="searchContentsController" destination="YFD-jV-blx" id="EKg-Gu-VRw"/>
+                        <outlet property="searchResultsDataSource" destination="YFD-jV-blx" id="3we-I1-eay"/>
+                        <outlet property="searchResultsDelegate" destination="YFD-jV-blx" id="PgE-go-h6I"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1428" y="601"/>
+        </scene>
+    </scenes>
+</document>
